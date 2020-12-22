@@ -73,28 +73,31 @@ header .phrase{
 header p{
     float: right;
 }
+
+/*      wrap      */
 .wrap{
     overflow: hidden;
     height: 600px;
-}
-.btn-create{
-    margin: 10px;
-    font-size: xx-large;
-    display: inline-block;
-}
-.btn-create a{
-    text-decoration: none;
 }
 a:visited {
     color: blue;
     text-decoration: none;
 }
-.btn-sort{
+.todo-create{
+    margin: 10px;
+    font-size: xx-large;
+    display: inline-block;
+}
+.todo-create a{
+    text-decoration: none;
+}
+.sort-box{
     margin-top: 10px;
     font-size: x-large;
     display: inline-block;
     float: right;
 }
+/*      todo      */
 .todo-list{
     width: 860px;
     margin: 5px auto;
@@ -105,9 +108,19 @@ a:visited {
     margin: 10px auto;
     padding-left: 10px;
     height: 40px;
+    border-radius: 5px;
     overflow: hidden;
 
 }
+.todo:hover{
+    color: blanchedalmond;
+    background: rgb(37, 37, 37);
+    cursor: pointer;
+    box-shadow: 5px 5px 5px 5px gray;
+    transform : translateY(3px);
+    transition-duration: 0.5s;
+}
+
 .todo > input[type='checkbox']{
     display: inline-block;
     transform : scale(3);
@@ -125,10 +138,95 @@ a:visited {
     overflow: hidden;
     text-overflow: ellipsis;
 }
+.todo > input[type='checkbox']:checked ~ .todo-title{
+    color: gray;
+    text-decoration: line-through;
+}
 .todo-duedate{
+    margin-right: 10px;
     display: inline-block;
     float: right;
     line-height: 40px;
     font-size: x-large;
 }
-    
+
+/*      todo create modal       */
+.modal{
+    /* display: none; */
+    position: fixed; 
+    z-index: 10; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+}
+.modal-create-form{
+    width: 400px;
+    height: 500px;
+    margin: 100px auto;
+    padding: 20px;
+    border-radius: 10px;
+    background-color:white;
+    overflow: hidden;
+    font-size: large;
+}
+.modal-create-title{
+    display: block;
+    text-align: center;
+    font-size: xx-large;
+    font-weight: bolder;
+}
+.modal-create-form label{
+    font-size: xx-large;
+    margin-right: 10px;
+    text-decoration: underline;
+}
+.modal-content{
+    display: block;
+    width: 400px;
+    margin: 20px 0;
+}
+.modal-content:nth-child(2n-1) input{
+    float: right;
+    margin-top: 2px;
+    width: 65%;
+    height: 24px;
+}
+.modal-content:nth-child(2) input{
+    margin-right: 18px;
+}
+.modal-content:nth-child(4) input{
+    margin-top: 5px;
+    width: 100%;
+    height: 200px;
+}
+
+/*      button      */
+.btn{
+    font-family:'Nanum Pen Script';
+    width: 70px;
+    height: 30px;
+    margin: 0 2px;
+    font-size: 24px;
+    border-radius: 5px;
+}
+.btn:hover{
+    cursor: pointer;
+    box-shadow: 2px 2px gray;
+    transform: scaleX(1.1);
+    transition-duration: 0.5s;
+}
+.btn-cancle{
+    background-color: rgb(69, 69, 73);
+    color: white;
+    font-weight: bold;
+    float: right;
+}
+.btn-create{
+    background-color: rgb(61, 65, 255);
+    color: white;
+    font-weight: bold;
+    float: right;
+}
