@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap" rel="stylesheet">
-    <script src="todo.js"></script>
     <title>To Do List</title>
 </head>
+
 <body>
     <header>
         <h1>To-Do List</h1>
@@ -16,7 +17,7 @@
     <hr>
     <div class="wrap">
         <div class="todo-create">
-            <a href="">+ to-do 추가</a>
+            <a href="#">+ to-do 추가</a>
         </div>
         <div class="sort-box">
             <input id="sort-by-importance" type="checkbox">
@@ -24,112 +25,46 @@
             <input id="sort-by-duedate" type="checkbox">
             <label for="sort-by-duedate">due-date 순</label>
         </div>
-        <div class="modal">
+        <div id="modal-create" class="modal">
             <form class="modal-create-form">
                 <div class="modal-create-title">
                     Create To-Do
                 </div>
                 <div>
                     <div class="modal-content">
-                        <label >Title</label >
+                        <label>Title</label>
                         <input type="text" name="create-title"><br>
                     </div>
                     <div class="modal-content">
-                        <label >Importance</label >
+                        <label>Importance</label>
                         3(Red)<input type="radio" name="create-importance" value="3">
                         2(Orange)<input type="radio" name="create-importance" value="2">
                         1(black)<input type="radio" name="create-importance" value="1">
                         <br>
                     </div>
                     <div class="modal-content">
-                        <label >Due date.</label >
+                        <label>Due date.</label>
                         <input type="datetime-local" name="create-duedate"><br>
                     </div>
                     <div class="modal-content">
-                        <label >Description</label ><br>
+                        <label>Description</label><br>
                         <input type="text" name="create-description">
                     </div>
                 </div>
-                <button class="btn btn-create" type="submit">Create</button>
+                <button class="btn btn-create" type="button">Create</button>
                 <button class="btn btn-cancle" type="button">Cancle</button>
             </form>
         </div>
         <div class="todo-list">
-            <div class="todo">
-                <input type="checkbox" name="todo-check">
-                <div class="todo-title">레이아웃 구성</div>
-                <div class="todo-duedate">
-                    due. 2020/12/21
-                </div>
-            </div>
-            <div class="todo">
-                <input type="checkbox" name="todo-check">
-                <div class="todo-title">레이아웃 구성</div>
-                <div class="todo-duedate">
-                    due. 2020/12/21
-                </div>
-            </div>
-            <div class="todo">
-                <input type="checkbox" name="todo-check">
-                <div class="todo-title">레이아웃 구성레이아웃 구성레이아웃 구성레이아웃 구성레이아웃 구성레이아웃 구성레이아웃 구성레이아웃 구성레이아웃 구성레이아웃 구성</div>
-                <div class="todo-duedate">
-                    due. 2020/12/21
-                </div>
-            </div>
-            <div class="todo">
-                <input type="checkbox" name="todo-check">
-                <div class="todo-title">레이아웃 구성</div>
-                <div class="todo-duedate">
-                    due. 2020/12/21
-                </div>
-            </div>
-            <div class="todo">
-                <input type="checkbox" name="todo-check">
-                <div class="todo-title">레이아웃 구성</div>
-                <div class="todo-duedate">
-                    due. 2020/12/21
-                </div>
-            </div>
-            <div class="todo">
-                <input type="checkbox" name="todo-check">
-                <div class="todo-title">레이아웃 구성</div>
-                <div class="todo-duedate">
-                    due. 2020/12/21
-                </div>
-            </div>
-            <div class="todo">
-                <input type="checkbox" name="todo-check">
-                <div class="todo-title">레이아웃 구성</div>
-                <div class="todo-duedate">
-                    due. 2020/12/21
-                </div>
-            </div>
-            <div class="todo">
-                <input type="checkbox" name="todo-check">
-                <div class="todo-title">레이아웃 구성</div>
-                <div class="todo-duedate">
-                    due. 2020/12/21
-                </div>
-            </div>
-            <div class="todo">
-                <input type="checkbox" name="todo-check">
-                <div class="todo-title">레이아웃 구성</div>
-                <div class="todo-duedate">
-                    due. 2020/12/21
-                </div>
-            </div>
-            <div class="todo">
-                <input type="checkbox" name="todo-check">
-                <div class="todo-title">레이아웃 구성</div>
-                <div class="todo-duedate">
-                    due. 2020/12/21
-                </div>
-            </div>
-        </div>  
+            
+        </div>
     </div>
     <footer>
-        <hr/>
-        Copyright © on1ystar 
+        <hr />
+        Copyright © on1ystar
     </footer>
+
+    <script src="todo.js"></script>
 </body>
+
 </html>

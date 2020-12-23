@@ -128,7 +128,7 @@ a:visited {
     margin-top: 14px;
 }
 .todo-title{
-    width: 650px;
+    width: 600px;
     display: inline-block;
     float: left;
     margin-left: 15px;
@@ -152,7 +152,7 @@ a:visited {
 
 /*      todo create modal       */
 .modal{
-    /* display: none; */
+    display: none;
     position: fixed; 
     z-index: 10; 
     left: 0;
@@ -163,6 +163,7 @@ a:visited {
     background-color: rgba(0,0,0,0.4);
 }
 .modal-create-form{
+    display: none;
     width: 400px;
     height: 500px;
     margin: 100px auto;
