@@ -30,13 +30,18 @@ function createTodoCreate(){
                     </div>`
                    
     todoList.insertAdjacentHTML('beforeend', todo);
+    console.log("To-Do create");
     cancleTodoCreate()
 }
 
-const btnTodoCreate = document.querySelector(".todo-create");
-const btnCancleModal = document.querySelector(".modal-create-form .btn-cancle");
-const btnCreateModal = document.querySelector(".modal-create-form .btn-create");
+function init(){
+    const btnTodoCreate = document.querySelector(".todo-create");
+    const btnCancleModal = document.querySelector(".modal-create-form .btn-cancle");
+    const btnCreateModal = document.querySelector(".modal-create-form .btn-create");
 
-btnTodoCreate.addEventListener("click", clickTodoCreate);
-btnCancleModal.addEventListener("click", cancleTodoCreate);
-btnCreateModal.addEventListener("click", createTodoCreate);
+    btnTodoCreate.addEventListener("click", clickTodoCreate);
+    btnCancleModal.addEventListener("click", cancleTodoCreate);
+    btnCreateModal.addEventListener("click", createTodoCreate);
+}
+
+init();
