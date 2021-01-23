@@ -3,327 +3,419 @@
    License: none (public domain)
 */
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
 }
 body {
-	line-height: 1;
+  line-height: 1;
+  background-color: cadetblue;
 }
-ol, ul {
-	list-style: none;
+ol,
+ul {
+  list-style: none;
 }
-blockquote, q {
-	quotes: none;
+blockquote,
+q {
+  quotes: none;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
 }
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
-body{
-    width: 960px;
-    margin: 0 auto;
-    font-family:'Nanum Pen Script', cursive;
+body {
+  width: 960px;
+  margin: 0 auto;
+  font-family: "Nanum Pen Script", cursive;
 }
-header{
-    display: block;
-    border: 1px solid white;
-    margin: 5px auto;
-    margin-top: 50px;
-    text-align: center;
-    overflow: hidden;
+header {
+  display: block;
+  margin: 5px auto;
+  margin-top: 50px;
+  text-align: center;
+  overflow: hidden;
 }
-h1{
-    font-size: 600%;
-    margin-bottom: 20px;
+h1 {
+  font-size: 600%;
+  margin-bottom: 20px;
 }
-h2{
-    font-size: 300%;
+h2 {
+  font-size: 300%;
 }
-h3{
-    font-size: 200%;
+h3 {
+  font-size: 200%;
 }
-header h1, h2, h3{
-    display: inline-block;
+header h1,
+h2,
+h3 {
+  display: inline-block;
 }
-header h3{
-    font-size: 250%;
-    margin-left: 15px;
+header h3 {
+  font-size: 250%;
+  margin-left: 15px;
 }
-header .username{
-    margin-left: 10px;
-    text-decoration: underline;
+header .username {
+  margin-left: 10px;
+  text-decoration: underline;
 }
-header .phrase{
-    font-size: 200%;
-    width: 650px;
-    margin: 3px auto;
-    display: block;
+header .phrase {
+  font-size: 200%;
+  width: 650px;
+  margin: 3px auto;
+  display: block;
 }
-header p{
-    float: right;
+header p {
+  float: right;
 }
 
 /*      wrap      */
-.wrap{
-    overflow: hidden;
-    height: 600px;
-    position: relative;
+.wrap {
+  overflow: hidden;
+  height: 600px;
+  position: relative;
 }
 a:visited {
-    color: blue;
-    text-decoration: none;
+  color: blue;
+  text-decoration: none;
 }
-.todo-create{
-    margin: 10px;
-    font-size: xx-large;
-    display: inline-block;
+.todo-create {
+  margin: 10px;
+  font-size: xx-large;
+  display: inline-block;
 }
-.todo-create a{
-    text-decoration: none;
+.todo-create a {
+  text-decoration: none;
 }
-.sort-box{
-    margin-top: 10px;
-    font-size: x-large;
-    display: inline-block;
-    float: right;
+.sort-box {
+  margin-top: 10px;
+  font-size: x-large;
+  display: inline-block;
+  float: right;
 }
 /*      todo      */
-.todo-list{
-    width: 860px;
-    margin: 5px auto;
-    display: block;
-    overflow: hidden;
+.todo-list {
+  width: 860px;
+  margin: 5px auto;
+  display: block;
+  overflow: hidden;
 }
-.todo{
-    margin: 10px auto;
-    padding-left: 10px;
-    height: 40px;
-    border-radius: 5px;
-    overflow: hidden;
+.todo {
+  margin: 10px auto;
+  padding-left: 10px;
+  height: 40px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.todo:hover {
+  color: blanchedalmond;
+  background: rgb(100, 95, 95);
+  cursor: pointer;
+  box-shadow: 3px 3px 3px 3px gray;
+  transform: translateY(3px);
+  transition-duration: 0.5s;
+}
 
+.todo > input[type="checkbox"] {
+  display: inline-block;
+  transform: scale(2.5);
+  float: left;
+  margin-top: 14px;
 }
-.todo:hover{
-    color: blanchedalmond;
-    background: rgb(100, 95, 95);
-    cursor: pointer;
-    box-shadow: 3px 3px 3px 3px gray;
-    transform : translateY(3px);
-    transition-duration: 0.5s;
+.todo-title {
+  width: 600px;
+  display: inline-block;
+  float: left;
+  margin-left: 15px;
+  line-height: 40px;
+  font-size: xx-large;
+  font-weight: bold;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
-
-.todo > input[type='checkbox']{
-    display: inline-block;
-    transform : scale(2.5);
-    float: left;
-    margin-top: 14px;
+.importance[value="3"] ~ .todo-title {
+  color: rgba(255, 8, 8, 0.74);
 }
-.todo-title{
-    width: 600px;
-    display: inline-block;
-    float: left;
-    margin-left: 15px;
-    line-height: 40px;
-    font-size: xx-large;
-    font-weight: bold;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+.importance[value="2"] ~ .todo-title {
+  color: orange;
 }
-.importance[value="3"] ~ .todo-title{
-    color: rgba(255, 8, 8, 0.74);
+.importance[value="1"] ~ .todo-title {
+  color: black;
 }
-.importance[value="2"] ~ .todo-title{
-    color: orange;
+.todo > input[type="checkbox"]:checked ~ .todo-title {
+  color: gray;
+  text-decoration: line-through;
 }
-.importance[value="1"] ~ .todo-title{
-    color: black;
-}
-.todo > input[type='checkbox']:checked ~ .todo-title{
-    color: gray;
-    text-decoration: line-through;
-}
-.todo-duedate{
-    margin-right: 10px;
-    display: inline-block;
-    float: right;
-    line-height: 40px;
-    font-size: x-large;
+.todo-duedate {
+  margin-right: 10px;
+  display: inline-block;
+  float: right;
+  line-height: 40px;
+  font-size: x-large;
 }
 
 /*      todo create modal       */
-.hidden{
-    display: none;
+.hidden {
+  display: none;
 }
 
-.modal{
-    position: fixed; 
-    z-index: 10; 
-    left: 0;
-    top: 0;
-    width: 100%; 
-    height: 100%; 
-    overflow: auto;
-    background-color: rgba(0,0,0,0.4);
+.modal {
+  position: fixed;
+  z-index: 10;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
 }
-.modal-create-form, 
-.modal-detail-form{
-    width: 400px;
-    height: 500px;
-    margin: 100px auto;
-    padding: 20px;
-    border-radius: 10px;
-    background-color:white;
-    overflow: hidden;
-    font-size: large;
+.modal-create-form,
+.modal-detail-form {
+  width: 400px;
+  height: 500px;
+  margin: 100px auto;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: white;
+  overflow: hidden;
+  font-size: large;
 }
-.modal-create-title, 
-.modal-detail-title{
-    display: block;
-    text-align: center;
-    font-size: xx-large;
-    font-weight: bolder;
+.modal-create-title,
+.modal-detail-title {
+  display: block;
+  text-align: center;
+  font-size: xx-large;
+  font-weight: bolder;
 }
 .modal-create-form label,
-.modal-detail-form label{
-    font-size: xx-large;
-    margin-right: 10px;
-    text-decoration: underline;
+.modal-detail-form label {
+  font-size: xx-large;
+  margin-right: 10px;
+  text-decoration: underline;
 }
-.modal-content{
-    display: block;
-    width: 400px;
-    margin: 20px 0;
+.modal-content {
+  display: block;
+  width: 400px;
+  margin: 20px 0;
 }
-.modal-content:nth-child(2n-1) input{
-    float: right;
-    margin-top: 2px;
-    width: 65%;
-    height: 24px;
+.modal-content:nth-child(2n-1) input {
+  float: right;
+  margin-top: 2px;
+  width: 65%;
+  height: 24px;
 }
-.modal-content:nth-child(2) input{
-    margin-right: 18px;
+.modal-content:nth-child(2) input {
+  margin-right: 18px;
 }
-.modal-content:nth-child(4) input{
-    margin-top: 5px;
-    width: 100%;
-    height: 200px;
+.modal-content:nth-child(4) input {
+  margin-top: 5px;
+  width: 100%;
+  height: 200px;
 }
 
 /*      button      */
-.btn{
-    font-family:'Nanum Pen Script';
-    width: 70px;
-    height: 30px;
-    margin: 0 2px;
-    font-size: 24px;
-    border-radius: 5px;
+.btn {
+  font-family: "Nanum Pen Script";
+  width: 70px;
+  height: 30px;
+  margin: 0 2px;
+  font-size: 24px;
+  border-radius: 5px;
 }
-.btn:hover{
-    cursor: pointer;
-    box-shadow: 2px 2px gray;
-    transform: scaleX(1.1);
-    transition-duration: 0.5s;
+.btn:hover {
+  cursor: pointer;
+  box-shadow: 2px 2px gray;
+  transform: scaleX(1.1);
+  transition-duration: 0.5s;
 }
-.btn-cancle{
-    background-color: rgb(69, 69, 73);
-    color: white;
-    font-weight: bold;
-    float: right;
+.btn-cancle {
+  background-color: rgb(69, 69, 73);
+  color: white;
+  font-weight: bold;
+  float: right;
 }
-.btn-create{
-    background-color: rgb(61, 65, 255);
-    color: white;
-    font-weight: bold;
-    float: right;
+.btn-create {
+  background-color: rgb(61, 65, 255);
+  color: white;
+  font-weight: bold;
+  float: right;
 }
-.btn-delete{
-    background-color: rgb(255, 61, 61);
-    color: white;
-    font-weight: bold;
-    float: right;
+.btn-delete {
+  background-color: rgb(255, 61, 61);
+  color: white;
+  font-weight: bold;
+  float: right;
 }
 
 /*      clock       */
-.clock{
-    font-size: 1200%;
-    color: rgb(224, 224, 224);
-    text-align: center;
-    position: absolute;
-    z-index: -10;
-    top: 150px;
-    left: 200px;
+.clock {
+  font-size: 1200%;
+  color: darkgrey;
+  text-align: center;
+  position: absolute;
+  z-index: -10;
+  top: 150px;
+  left: 200px;
 }
 
 /*      login       */
-.login{
-    margin: 350px auto;
-    text-align: center;
+.login {
+  margin: 350px auto;
+  text-align: center;
 }
-.login-form input{
-    width: 350px;
-    height: 50px;
-    margin-top: 20px;
-    font-size: 35px;
-    text-align: center;
-    border-radius: 10px;
-    font-family:'Nanum Pen Script', cursive;
-    border-color: seashell;
-    transition-duration: 0.5s;
+.login-form input {
+  width: 350px;
+  height: 50px;
+  margin-top: 20px;
+  font-size: 35px;
+  text-align: center;
+  border-radius: 10px;
+  font-family: "Nanum Pen Script", cursive;
+  border-color: seashell;
+  transition-duration: 0.5s;
 }
-.login-form input:focus{
-    outline: none;
-    box-shadow: 1px 1px 3px 3px steelblue;
-
+.login-form input:focus {
+  outline: none;
+  box-shadow: 1px 1px 3px 3px steelblue;
 }
-.fadeout{
-    animation: fadeout 1s;
-    animation-fill-mode: forwards;
+.fadeout {
+  animation: fadeout 1s;
+  animation-fill-mode: forwards;
 }
 @keyframes fadeout {
-    from {
-        opacity: 1;
-    }
-    to {
-        opacity: 0;
-    }
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
 }
-.fadein{
-    animation: fadein 1s;
-    animation-fill-mode: forwards;
+.fadein {
+  animation: fadein 1s;
+  animation-fill-mode: forwards;
 }
 @keyframes fadein {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/*      login       */
+.bgImage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  animation: fadein 1s;
 }
