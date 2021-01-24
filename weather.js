@@ -15,7 +15,7 @@ function getWeather(lat, lon) {
       weatherDom.querySelector(".location").innerText = location;
       weatherDom.querySelector(".temperature").innerText = temperature;
       weatherDom.querySelector(".weather").innerText = `-${weather}-`;
-      fetch(`http://openweathermap.org/img/wn/${icon}.png`)
+      fetch(`https://openweathermap.org/img/wn/${icon}.png`)
         .then(function (response) {
           return response.url;
         })
