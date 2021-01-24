@@ -107,7 +107,6 @@ section {
 }
 body {
   line-height: 1;
-  background-color: cadetblue;
 }
 ol,
 ul {
@@ -409,7 +408,7 @@ a:visited {
   }
 }
 
-/*      login       */
+/*      bg       */
 .bgImage {
   position: absolute;
   top: 0;
@@ -418,4 +417,29 @@ a:visited {
   height: 100%;
   z-index: -1;
   animation: fadein 1s;
+}
+
+/*      weather       */
+.geo {
+  position: absolute;
+  top: 3%;
+  right: 28%;
+  text-align: left;
+  font-size: large;
+  font-weight: bold;
+}
+.geo .icon {
+  display: inline-block;
+}
+
+.geo .icon img {
+  width: 70px;
+  height: 70px;
+}
+
+.geo .geo-info {
+  display: inline-block;
+}
+.geo .geo-info span {
+  margin-left: 3px;
 }
