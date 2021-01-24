@@ -7,7 +7,7 @@ function genNumber() {
 
 function paintImg(imgNum) {
   const img = new Image();
-  img.src = `https://github.com/on1ystar/momontom/tree/master/img/${imgNum}.jpg`;
+  img.src = `./img/${imgNum}.jpg`;
   img.classList.add("bgImage");
   body.appendChild(img);
 }
